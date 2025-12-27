@@ -12,3 +12,11 @@ Projeto desenvolvido para digitalizar um negócio local de estética afro em Ibi
 - HTML5 Semântico
 - CSS3 (Grid Layout & Animations)
 - Design Responsivo (Mobile First)
+
+---
+
+## 📞 Contato & Suporte
+
+Gostou do projeto? Tem dúvidas? Me siga no Instagram:
+
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/eutito.tech)
