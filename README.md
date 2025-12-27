@@ -1,3 +1,4 @@
+![Preview do Site](preview.jpg)
 # 💇‍♀️ Paloma Hair - Landing Page
 
 Projeto desenvolvido para digitalizar um negócio local de estética afro em Ibirité/MG.
