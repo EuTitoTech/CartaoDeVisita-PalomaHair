@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paloma Hair | Especialista</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --vermelho-premium: #D90429;
+            --vermelho-escuro: #8d0801;
+            --preto-fundo: #090909;
+            --cinza-card: #141414;
+            --branco: #ffffff;
+            --dourado: #C5A059;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--preto-fundo);
+            color: var(--branco);
+            font-family: 'Manrope', sans-serif;
+            text-align: center;
+        }
+
+        /* === HEADER === */
+        .header {
+            position: relative;
+            height: 280px;
+            background-image: url('06.jpeg');
+            background-size: cover;
+            background-position: center 20%;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), var(--preto-fundo));
+        }
+
+        .perfil-wrapper {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .perfil-foto {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--preto-fundo);
+            box-shadow: 0 0 0 2px var(--vermelho-premium); /* Borda fina vermelha */
+            object-fit: cover;
+        }
+
+        /* === INFO === */
+        .info-container {
+            margin-top: 60px;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .bio {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        /* === BOTÕES COM EFEITOS (RESTAURADOS) === */
+        .btn-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 350px;
+            margin: 0 auto 40px auto;
+        }
+
+        .btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            overflow: hidden; /* Essencial para o brilho */
+            transition: all 0.3s ease;
+        }
+
+        .btn i { margin-right: 12px; font-size: 1.3rem; }
+
+        /* Botão Principal (WhatsApp com Brilho) */
+        .btn-destaque {
+            background: linear-gradient(90deg, var(--vermelho-escuro), var(--vermelho-premium));
+            color: white;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 10px 20px -10px rgba(217, 4, 41, 0.6); /* Sombra neon */
+        }
+
+        .btn-destaque:active { transform: scale(0.98); }
+
+        /* O Efeito de Brilho Passando */
+        .btn-destaque::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 50%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
+            transform: skewX(-25deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            20% { left: 200%; }
+            100% { left: 200%; }
+        }
+
+        /* Botão Secundário (Vidro) */
+        .btn-secundario {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .btn-secundario:hover {
+            border-color: var(--vermelho-premium);
+            color: var(--vermelho-premium);
+        }
+
+        /* === GALERIA LIMPA === */
+        .galeria-section {
+            padding: 20px 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .titulo-secao {
+            text-align: left;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            border-left: 3px solid var(--vermelho-premium);
+            padding-left: 10px;
+            color: #eee;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .card-foto {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4 / 5; /* Formato Retrato Instagram */
+            overflow: hidden;
+            border-radius: 4px;
+            background-color: #222;
+        }
+
+        .card-foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        /* Efeito ao clicar/tocar na foto */
+        .card-foto:hover img {
+            transform: scale(1.03);
+            filter: brightness(1.1);
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 30px;
+            font-size: 0.75rem;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="overlay"></div>
+        <div class="perfil-wrapper">
+            <img src="Paloma Hair.jpeg" class="perfil-foto" alt="Foto Perfil">
+        </div>
+    </header>
+
+    <section class="info-container">
+        <h1>Paloma Hair</h1>
+        <p class="bio">Especialista em Mega Hair e Tranças Afro.<br>Transformando visual e autoestima em Ibirité/MG 🇧🇷</p>
+
+        <div class="btn-wrapper">
+            <a href="https://wa.me/5531972187911" class="btn btn-destaque">
+                <i class="fab fa-whatsapp"></i> AGENDAR HORÁRIO
+            </a>
+            <a href="https://www.instagram.com/paloma.hair.100/" class="btn btn-secundario">
+                <i class="fab fa-instagram"></i> VER INSTAGRAM
+            </a>
+        </div>
+    </section>
+
+    <section class="galeria-section">
+        <h2 class="titulo-secao">Portfólio Recente</h2>
+        
+        <div class="grid-container">
+            <div class="card-foto"><img src="08.jpeg" alt="Foto"></div>
+            <div class="card-foto"><img src="07.jpeg" alt="Foto"></div>
+            <div class="card-foto"><img src="06.jpeg" alt="Foto"></div>
+            <div class="card-foto"><img src="04.jpeg" alt="Foto"></div>
+            <div class="card-foto"><img src="05.jpeg" alt="Foto"></div>
+            
+            <div class="card-foto"><img src="03.jpeg" alt="Foto"></div>
+            <div class="card-foto"><img src="02.jpeg" alt="Foto"></div>
+            <div class="card-foto"><img src="01.jpeg" alt="Foto"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Desenvolvido por eutito.tech</p>
+        <p>© 2026 Paloma Hair</p>
+    </footer>
+
+</body>
+</html>
