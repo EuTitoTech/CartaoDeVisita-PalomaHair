@@ -13,10 +13,16 @@ Projeto desenvolvido para digitalizar um negócio local de estética afro em Ibi
 - CSS3 (Grid Layout & Animations)
 - Design Responsivo (Mobile First)
 
+## 📞 Contato & Contratação
+
+Estou disponível para projetos de desenvolvimento web e consultoria de SEO em Ibirité/MG e remoto.
+
+* **Instagram:** [@eutito.tech](https://instagram.com/eutito.tech)
+* **LinkedIn:** [Seu Perfil](https://linkedin.com/in/adriano-junior-b27066250)
+* **GitHub:** [@EuTitoTech](https://github.com/EuTitoTech)
+
 ---
 
-## 📞 Contato & Suporte
-
-Gostou do projeto? Tem dúvidas? Me siga no Instagram:
-
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/eutito.tech)
+<p align="center">
+  Desenvolvido com 💜 e ☕ por <a href="https://github.com/EuTitoTech">Tito</a>
+</p>
